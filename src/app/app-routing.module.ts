@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HigherOrderComponent } from './higher-order/higher-order.component';
+import { withRouteInput } from './higher-order/withRouteInput';
 
 
 const routes: Routes = [
   {
     path: 'hoc',
-    component: HigherOrderComponent
+    component: withRouteInput(HigherOrderComponent)
   }
 ];
 

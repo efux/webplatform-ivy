@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WithRouteInput } from './withRouteInput';
 
-@WithRouteInput()
 @Component({
     selector: 'app-higher-order',
     template: `

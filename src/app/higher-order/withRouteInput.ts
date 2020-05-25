@@ -1,9 +1,10 @@
 import { ɵɵdirectiveInject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-export function WithRouteInput() {
+export const withRouteInput = cmpType => {
 
-    return cmpType => {
+        console.log({...cmpType});
+
         const originalFactory = cmpType.ɵfac;
 
         cmpType.ɵcmp.factory = (...args) => {
@@ -22,6 +23,4 @@ export function WithRouteInput() {
         };
 
         return cmpType;
-    };
-
-}
+};

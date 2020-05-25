@@ -19,11 +19,9 @@ export class AppComponent {
   }
 
   async onClicked() {
-
     const infoComp = await import( /* webpackChunkName: 'info-cmp' */ './information/information.component');
     const factory = this.componentFactoryResolver.resolveComponentFactory(infoComp.InformationComponent);
     const comp = this.vcr.createComponent(factory);
-
   }
 
 }

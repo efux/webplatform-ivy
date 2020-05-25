@@ -2,9 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<h1>Webplatform FG - Ivy</h1>
+
+  <button>Add lazy loaded component</button>
+
+  <router-outlet></router-outlet>
+  `
 })
 export class AppComponent {
-  title = 'webplatform-ivy';
 }

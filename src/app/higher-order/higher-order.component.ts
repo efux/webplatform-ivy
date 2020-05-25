@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { WithRouteInput } from './withRouteInput';
 
+@WithRouteInput()
 @Component({
     selector: 'app-higher-order',
     template: `
@@ -13,11 +14,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HigherOrderComponent implements OnInit {
 
+    @Input()
     name: string;
 
-    constructor(private activatedRoute: ActivatedRoute) { }
+    constructor() { }
 
     ngOnInit(): void {
-        this.name = this.activatedRoute.snapshot.queryParamMap.get('name');
     }
 }
